@@ -72,26 +72,10 @@ Both datasets were collected through API calls, cleaned, and merged to create a 
 
 ## 🚦 Dataset Analysis Plan
 
-1. **Data Preprocessing**:
-   * Clean and merge traffic and weather datasets
-   * Handle missing values and outliers
-   * Create temporal features (hour of day, day of week, etc.)
-
-2. **Exploratory Data Analysis**:
-   * Visualize traffic patterns by time of day and day of week
-   * Examine relationships between weather variables and traffic metrics
-   * Create correlation heatmaps to identify important relationships
-
-3. **Advanced Analysis**:
-   * Apply Principal Component Analysis (PCA) to identify key patterns
-   * Conduct cluster analysis to discover natural traffic pattern groups
-   * Perform seasonal decomposition to understand weekly patterns
-   * Generate district-based heatmaps to understand geographical patterns
-
-4. **Hypothesis Testing**:
-   * Conduct statistical tests on key relationships
-   * Validate or reject initial hypotheses
-   * Document significance levels and effect sizes
+1.  **Data Preparation**: Clean, merge, and enrich datasets (e.g., temporal features, weather categories). Apply necessary transformations, avoiding direct use of raw data.
+2.  **Exploratory Data Analysis (EDA)**: Visualize patterns (time, weather impact) and identify correlations.
+3.  **Advanced Analysis**: Apply PCA, clustering, and seasonal decomposition.
+4.  **Hypothesis Testing**: Statistically validate key relationships identified during EDA.
 
 ## 🚦 Tools and Technologies
 
@@ -104,28 +88,10 @@ Both datasets were collected through API calls, cleaned, and merged to create a 
 
 ## 🚦 Analysis and Key Findings
 
-### Traffic Patterns by Time
-- Distinct patterns observed: Morning Rush (7-10 AM) and Evening Rush (4-7 PM) show higher density, especially weekdays. Weekends generally lower density with different peaks.
-
-### Weather Impact on Traffic
-- **Precipitation**: Statistically significant positive correlation with traffic density (r=0.091, p=0.015).
-- **Temperature & Conditions**: No significant direct effect on average speeds, though different conditions show varying patterns.
-
-### District-Based Analysis
-- Different districts exhibit distinct congestion patterns, influenced by location-specific characteristics.
-
-### Cluster Analysis Results
-- Two distinct clusters identified:
-    - **Cluster 0**: Lower density, higher speeds (free-flowing).
-    - **Cluster 1**: Higher density, lower speeds (congested), more frequent during rush hours and in high-density districts.
-
-### Summary of Key Findings
-- Significant positive correlation between precipitation and traffic density.
-- Two distinct traffic pattern clusters discovered.
-- Varying congestion patterns across different districts.
-- Weekly seasonality detected in traffic patterns.
+*   **EDA Results**: Revealed distinct daily/weekly traffic patterns (e.g., morning/evening rushes) and identified key correlations (e.g., precipitation positively correlated with density, r=0.091, p=0.015).
+*   **Hypothesis Testing**: Confirmed the significance of precipitation's effect on density. Other initial hypotheses (weekday vs. weekend density, weather effect on speed, rush hour difference) were not statistically significant with the enriched dataset.
+*   **Advanced Insights**: Cluster analysis identified two main traffic states (free-flow vs. congested). District-level variations and weekly seasonality were also observed.
 
 ## Acknowledgments
-- Istanbul Metropolitan Municipality for providing traffic data access
-- WeatherAPI.com for weather data
-- Project instructors and teaching assistants for guidance
+
+This project was made possible by the contributions of the Istanbul Metropolitan Municipality and WeatherAPI.com. Special thanks to the data scientists and engineers who helped collect, clean, and analyze the data.
